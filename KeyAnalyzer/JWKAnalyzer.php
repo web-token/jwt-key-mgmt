@@ -16,9 +16,9 @@ namespace Jose\Component\KeyManagement\KeyAnalyzer;
 use Jose\Component\Core\JWK;
 
 /**
- * Interface JWKAnalyzerInterface.
+ * Interface JWKAnalyzer.
  */
-interface JWKAnalyzerInterface
+interface JWKAnalyzer
 {
     /**
      * @param JWK      $jwk
