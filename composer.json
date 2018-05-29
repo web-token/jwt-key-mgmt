@@ -20,7 +20,6 @@
         }
     },
     "require": {
-        "php": "^7.1",
         "lib-openssl": "*",
         "paragonie/sodium_compat": "^1.2",
         "web-token/jwt-core": "^1.2"
