@@ -22,7 +22,8 @@
     "require": {
         "lib-openssl": "*",
         "paragonie/sodium_compat": "^1.2",
-        "web-token/jwt-core": "^1.2"
+        "web-token/jwt-core": "^1.2",
+        "web-token/jwt-util-ecc": "^1.2"
     },
     "require-dev": {
         "php-http/message-factory": "^1.0",
