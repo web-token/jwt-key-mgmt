@@ -11,14 +11,14 @@ declare(strict_types=1);
  * of the MIT license.  See the LICENSE file for details.
  */
 
-namespace Jose\Component\KeyManagement\KeyAnalyzer;
+namespace Jose\Component\KeyManagement\Analyzer;
 
 use Base64Url\Base64Url;
 use Jose\Component\Core\JWK;
 
 final class RsaAnalyzer implements KeyAnalyzer
 {
-    public function analyze(JWK $jwk, MessageBag $bag)
+    public function analyze(JWK $jwk, MessageBag $bag): void
     {
         if ('RSA' !== $jwk->get('kty')) {
             return;

@@ -11,16 +11,16 @@ declare(strict_types=1);
  * of the MIT license.  See the LICENSE file for details.
  */
 
-namespace Jose\Component\KeyManagement\KeyAnalyzer;
+namespace Jose\Component\KeyManagement\Analyzer;
 
 use Jose\Component\Core\JWK;
 
-final class KeyIdentifierAnalyzer implements KeyAnalyzer
+final class AlgorithmAnalyzer implements KeyAnalyzer
 {
-    public function analyze(JWK $jwk, MessageBag $bag)
+    public function analyze(JWK $jwk, MessageBag $bag): void
     {
-        if (!$jwk->has('kid')) {
-            $bag->add(Message::medium('The parameter "kid" should be added.'));
+        if (!$jwk->has('alg')) {
+            $bag->add(Message::medium('The parameter "alg" should be added.'));
         }
     }
 }
