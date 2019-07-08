@@ -21,6 +21,10 @@ final class ES512KeyAnalyzer implements KeyAnalyzer
 {
     public function analyze(JWK $jwk, MessageBag $bag): void
     {
+        if (! \extension_loaded('gmp')) {
+            throw new \LogicException(static::class . ' requires gmp extension');
+        }
+
         if ('EC' !== $jwk->get('kty')) {
             return;
         }
